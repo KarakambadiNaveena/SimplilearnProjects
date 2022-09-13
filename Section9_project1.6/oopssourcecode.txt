@@ -1,0 +1,280 @@
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPlibrary
+{
+    public interface Interface1
+    {
+       void PrintData();
+       
+
+    }
+}
+----------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPlibrary
+{
+	public class Student : Interface1
+	{
+		private string _sname;
+
+		public string SName
+		{
+			get { return _sname; }
+			set { _sname = value; }
+		}
+
+		private int _class;
+
+		public int Class
+		{
+			get { return _class; }
+			set { _class = value; }
+		}
+		private string _section;
+
+		public string Section
+		{
+			get { return _section; }
+			set { _section = value; }
+		}
+		public static List<Student> StudentList = new List<Student>();
+		public void Addtolist(Student s)
+		{
+            StudentList.Add(s);
+
+        }
+		public void PrintData()
+		{
+			foreach (var item in StudentList)
+			{
+                Console.WriteLine($"Student Name : {item._sname}  Class : {item._class}");
+            }
+
+
+
+
+		}
+	}
+}
+-------------------------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPlibrary
+{
+	public class Teacher : Interface1
+	{
+		private string _tname;
+
+		public string TName
+		{
+			get { return _tname; }
+			set { _tname = value; }
+		}
+		private int _tclass;
+
+		public int Tclass
+		{
+			get { return _tclass; }
+			set { _tclass = value; }
+		}
+		private string _tsection;
+
+		public string TSection
+		{
+			get { return _tsection; }
+			set { _tsection = value; }
+		}
+		private string _subject;
+
+		public string Subject
+		{
+			get { return _subject; }
+			set { _subject = value; }
+		}
+		public static List<Teacher> TeacherList = new List<Teacher>();
+        public void Addtolist(Teacher t)
+        {
+            TeacherList.Add(t);
+
+        }
+
+        public void PrintData()
+		{
+			foreach (var item in TeacherList)
+			{
+				Console.WriteLine("Teacher Name :" + item.TName + "  Subject : " + item.Subject);
+			}
+
+
+
+		}
+	}
+}
+
+--------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace OOPlibrary
+{
+	public class Subject : Interface1
+	{
+		private string _subname;
+
+		public string SubName
+		{
+			get { return _subname; }
+			set { _subname = value; }
+		}
+		private int _code;
+
+		public int Code
+		{
+			get { return _code; }
+			set { _code = value; }
+		}
+		public static List<Subject> SubjectList = new List<Subject>();
+        public void Addtolist(Subject su)
+        {
+            SubjectList.Add(su);
+
+        }
+
+        public void PrintData()
+		{
+			foreach (var item in SubjectList)
+			{
+				Console.WriteLine("Subject Name : " + item.SubName +  " Subject Code :" + item.Code);
+			}
+
+
+		}
+	}
+}
+
+-------------------------------------------------------------------------------------------------------------------
+
+using System;
+using System.CodeDom.Compiler;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using OOPlibrary;
+
+namespace OOPproject
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Menu 1 for student, 2 for Teacher, 3  for Subject");
+            int ch = Convert.ToInt32(Console.ReadLine());
+            
+           
+            bool status;
+            string temp;
+            status = false;
+
+
+            do { 
+            switch (ch)
+                {
+                    case 1:
+                        Student s = new Student();
+
+                        Console.WriteLine("Enter student name");
+                        s.SName = Console.ReadLine();
+                        Console.WriteLine("Enter class");
+                        s.Class = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter section");
+                        s.Section = Console.ReadLine();
+                        s.Addtolist(s);
+                    
+                        Console.WriteLine("Printing student details ");
+                        
+                        s.PrintData();
+                       
+                        Console.WriteLine("do you want to continue(Y/N)");
+                        temp = Console.ReadLine();
+                        if (temp == "y" || temp == "Y")
+                        {
+                            status = true;
+                        }
+                    
+                        break;
+                    case 2:
+                        Teacher t = new Teacher();
+
+                        Console.WriteLine("Enter teacher name");
+                        t.TName = Console.ReadLine();
+                        Console.WriteLine("Enter class");
+                        t.Tclass = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter section");
+                        t.TSection = Console.ReadLine();
+                        Console.WriteLine("Enter subject");
+                        t.Subject = Console.ReadLine();
+                        t.Addtolist(t);
+
+                        Console.WriteLine("Printing  teacher details");
+                        t.PrintData();
+                        Console.WriteLine("do you want to continue(Y/N)");
+                        temp = Console.ReadLine();
+                        if (temp == "y" || temp == "Y")
+                        {
+                        status = true;
+                        }
+                        
+                            break;
+                    case 3:
+                        Subject su = new Subject();
+
+                        Console.WriteLine("Enter subject name");
+                        su.SubName = Console.ReadLine();
+                        Console.WriteLine("Enter subject code");
+                        su.Code = Convert.ToInt32(Console.ReadLine());
+                        su.Addtolist(su);
+                        Console.WriteLine("Printing subject details");
+                        su.PrintData();
+                        Console.WriteLine("do you want to continue(Y/N)");
+                        temp = Console.ReadLine();
+                        if (temp == "y" || temp == "Y")
+                        {
+                        status = true;
+                        }
+                    
+                         break;
+                        default:
+                        Environment.Exit(1);
+                        break;
+            }
+            } while (status);
+        } 
+
+
+
+
+
+    }
+}
+ 
+
+

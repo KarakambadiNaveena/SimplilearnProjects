@@ -1,0 +1,14 @@
+Naveena,8
+Pravalli,9
+Sweety,10
+Nani,7
+Anitha,6
+Swetha,9
+Sree,10
+Bhavya,8
+Bhuvi,9
+John,8
+Kavya,10
+Sam,9
+  
+

@@ -1,0 +1,23 @@
+                                  STUDENT DATA
+                                  ------------
+
+S.NO	  NAME		  ROLLNO	 SECTION         CLASS	   ADDRESS 
+---------------------------------------------------------------------------- 
+1      V.RAMYA             501		    A		   9       Tirupati
+2      K.NAVEENA           502              A              9       Kadapa
+3      A.PRAVALLI          503              A              9       Tirupati
+4      K.SHRINI            504              A              9       Pune                     
+5      A.SULAKSHANA 	   505              A              9       Banglore
+6      R.PAVAN             506              A              9       Chennai
+7      I.PREM              507              A              9       Mumbai
+8      T.LAKSHMI           508              A              9       Paris
+9      M.SHALINI           509              A              9       Tirupati
+10     S.SAM               510              A              9       Kadapa
+11     S.SAMANTHA          511              A              9       Tirupati
+12     S.SAHITHI           512              A              9       Tiruthani
+13     V.RAj               513		    A		   9       Tirupati
+14     K.NAVEEN            514              A              9       Kadapa
+15     A.SRAVANI           515              A              9       Tirupati
+
+ 
+GITHUB LINK :: git@github.com:KarakambadiNaveena/SimplilearnProjects.git

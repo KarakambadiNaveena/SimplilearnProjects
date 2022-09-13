@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Assign4Component } from './assign4.component';
+import { Assign7Component } from './assign7.component';
 
-describe('Assign4Component', () => {
-  let component: Assign4Component;
-  let fixture: ComponentFixture<Assign4Component>;
+describe('Assign7Component', () => {
+  let component: Assign7Component;
+  let fixture: ComponentFixture<Assign7Component>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Assign4Component ]
+      declarations: [ Assign7Component ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(Assign4Component);
+    fixture = TestBed.createComponent(Assign7Component);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

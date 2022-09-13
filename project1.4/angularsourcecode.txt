@@ -1,0 +1,55 @@
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-assign7',
+  templateUrl: './assign7.component.html',
+  styleUrls: ['./assign7.component.css']
+})
+export class Assign7Component implements OnInit {
+
+  constructor() {
+    
+   }
+
+  ngOnInit(): void {
+  }
+
+}
+--------------------------------------------------------------------------------
+
+
+
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+
+import { Assign7Component } from './assign7.component';
+
+describe('Assign7Component', () => {
+  let component: Assign7Component;
+  let fixture: ComponentFixture<Assign7Component>;
+
+  beforeEach(async () => {
+    await TestBed.configureTestingModule({
+      declarations: [ Assign7Component ]
+    })
+    .compileComponents();
+
+    fixture = TestBed.createComponent(Assign7Component);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+  });
+});
+
+-----------------------------------------------------------------------------
+
+
+<p>assign7 works!</p>
+<div style ="text-align: center">
+<h1>
+    {{' titlecase example '| titlecase}}
+</h1>
+</div>
+
