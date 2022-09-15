@@ -1,0 +1,240 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace playerandteam
+{
+    public interface ITeam
+    {
+        void Add(player player);
+        void Remove(int playerId);
+        void GetPlayerById(int playerId);
+        void GetPlayerByName(string playerName);
+
+        void GetAllPlayers();
+
+    }
+}
+
+=========================================================================================================================================================
+using System;
+using System.Collections.Generic;
+using System.Diagnostics.Eventing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace playerandteam
+{
+    public class Program
+    {
+        static void Main(string[] args)
+        {
+            string temp;
+
+            List<player> list = new List<player>();
+           
+            player p = new player();
+            Onedayteam t = new Onedayteam();
+            bool status;
+            status = false;
+
+            do
+            { 
+                Console.WriteLine("Enter 1:To Add Player 2:To Remove Player by Id 3.Get Player By Id 4.Get Player by Name 5.Get All Players:");
+                int ch = Convert.ToInt32(Console.ReadLine());
+                
+               switch (ch)
+                {
+                    case 1:
+                        t.AddPlayer();
+
+                        break;
+                    case 2:
+                        Console.WriteLine("Enter Player id to remove");
+                        p.PlayerID = Int32.Parse(Console.ReadLine());
+                        t.Remove(p.PlayerID);
+                        list.Remove(p);
+                        break;
+                    case 3:
+                        Console.WriteLine("Enter Player id to print details");
+                        p.PlayerID = Int32.Parse(Console.ReadLine());
+                        t.GetPlayerById(p.PlayerID);
+                        break;
+                    case 4:
+                        Console.WriteLine("Enter Player Name to print details");
+                        p.PlayerName = Console.ReadLine();
+                        t.GetPlayerByName(p.PlayerName);
+                        break;
+                    case 5:
+                        t.GetAllPlayers();
+                        
+                       
+                        break;
+                }
+
+                     Console.WriteLine("do you want to continue(Y/N)");
+                      temp = Console.ReadLine();
+                   
+                      if (temp == "y" || temp == "Y")
+                      {
+                       status = true;
+                      }
+            } while (status);
+        }
+    }
+}
+============================================================================================================
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace playerandteam
+{
+    public class player
+    {
+        private int _PlayerID;
+
+        public int PlayerID
+        {
+            get { return _PlayerID; }
+            set { _PlayerID = value; }
+        }
+
+        private string _PlayerName;
+
+        public string PlayerName
+        {
+            get { return _PlayerName; }
+            set { _PlayerName = value; }
+        }
+        private int _PlayerAge;
+
+        public int PlayerAge
+        {
+            get { return _PlayerAge; }
+            set { _PlayerAge = value; }
+        }
+    }
+}
+
+===================================================================================================================================================
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+
+namespace playerandteam
+{
+    public class Onedayteam : ITeam
+    {
+        public static int PlayerCount = 0;
+        List<player> list = new List<player>();
+        List<Onedayteam>plist =new List<Onedayteam>();
+
+        public void AddPlayer()
+        {
+            if (PlayerCount < 11)
+            {
+                player p = new player();
+                Console.WriteLine("Enter Player id");
+                p.PlayerID = Int32.Parse(Console.ReadLine());
+                Console.WriteLine("Enter Player Name :");
+                p.PlayerName = Console.ReadLine();
+                Console.WriteLine("Enter Player Age ");
+                int age = Convert.ToInt32(Console.ReadLine());
+                p.PlayerAge = age;
+                this.list.Add(p);
+                PlayerCount++;
+            }
+            else
+            {
+                Console.WriteLine("Team is Full...");
+            }
+        }
+       public void Add(player player)
+        {
+            if (PlayerCount < 11)
+            {
+                this.list.Add(player);
+                PlayerCount++;
+                Console.WriteLine("player added successfully");
+            }
+            else
+            {
+                Console.WriteLine("Team is full...");
+            }
+        }
+        public void GetAllPlayers()
+        {
+            foreach (var item in this.list)
+            {
+                Console.WriteLine($"Player ID : {item.PlayerID} Player Name: {item.PlayerName} Player Age: {item.PlayerAge}");
+            }
+           
+        }
+
+        public void Remove(int playerId)
+        {
+            var found = this.list.Single(r => r.PlayerID == playerId);
+            if (found != null)
+            {
+                this.list.Remove(found);
+                PlayerCount--;
+                Console.WriteLine("Player Removed Successfully....");
+            }
+            else
+            {
+                Console.WriteLine("Player Not Found");
+            }
+           
+        }
+          public void GetPlayerById(int playerId)
+        {
+            var found = this.list.FindAll(fo => fo.PlayerID == playerId);
+            if (found != null)
+            {
+                Console.WriteLine("Player Found");
+                foreach (var item in found)
+                {
+                    Console.WriteLine($"Player Id : {item.PlayerID} Player Name : {item.PlayerName} Age : {item.PlayerAge}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Player Not Found!!");
+            }
+        }
+        public void GetPlayerByName(string playerName)
+        {
+            var found = this.list.FindAll(fo => fo.PlayerName == playerName);
+            if (found != null)
+            {
+                Console.WriteLine("Player Found");
+                foreach (var item in found)
+                {
+
+                    Console.WriteLine($"Player Id : {item.PlayerID} Player Name : {item.PlayerName} Age : {item.PlayerAge}");
+                }
+            }
+            else
+            {
+                Console.WriteLine("Player Not Found!!");
+            }
+        }
+    }
+}
+    
+
+===================================================================================================================================================
