@@ -1,0 +1,12 @@
+D:\C#\MVCProject\Helper_library\bin\Debug\Helper_library.dll
+D:\C#\MVCProject\Helper_library\bin\Debug\Helper_library.pdb
+D:\C#\MVCProject\Helper_library\obj\Debug\Helper_library.csproj.AssemblyReference.cache
+D:\C#\MVCProject\Helper_library\obj\Debug\Helper_library.csproj.CoreCompileInputs.cache
+D:\C#\MVCProject\Helper_library\obj\Debug\Helper_library.dll
+D:\C#\MVCProject\Helper_library\obj\Debug\Helper_library.pdb
+D:\C#\MVCProject\Helper_library\bin\Debug\BLL_library.dll
+D:\C#\MVCProject\Helper_library\bin\Debug\DAL_library.dll
+D:\C#\MVCProject\Helper_library\bin\Debug\BLL_library.pdb
+D:\C#\MVCProject\Helper_library\bin\Debug\DAL_library.pdb
+D:\C#\MVCProject\Helper_library\obj\Debug\Helper_library.csproj.CopyComplete
+D:\C#\MVCProject\Helper_library\bin\Debug\DAL_library.dll.config

@@ -1,0 +1,10 @@
+D:\C#\MVCProject\DAL_library\bin\Debug\DAL_library.dll
+D:\C#\MVCProject\DAL_library\bin\Debug\DAL_library.pdb
+D:\C#\MVCProject\DAL_library\obj\Debug\DAL_library.csproj.AssemblyReference.cache
+D:\C#\MVCProject\DAL_library\obj\Debug\DAL_library.csproj.CoreCompileInputs.cache
+D:\C#\MVCProject\DAL_library\obj\Debug\DAL_library.dll
+D:\C#\MVCProject\DAL_library\obj\Debug\DAL_library.pdb
+D:\C#\MVCProject\DAL_library\bin\Debug\BLL_library.dll
+D:\C#\MVCProject\DAL_library\bin\Debug\BLL_library.pdb
+D:\C#\MVCProject\DAL_library\obj\Debug\DAL_library.csproj.CopyComplete
+D:\C#\MVCProject\DAL_library\bin\Debug\DAL_library.dll.config

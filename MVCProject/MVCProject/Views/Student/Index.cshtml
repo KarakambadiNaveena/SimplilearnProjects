@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MVCProject.Models.StudentModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.StudentClass)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.StudentClass)
+        </td>
+        <td>
+
+            @Html.ActionLink("Edit", "Edit", new { studid = Convert.ToInt32(item.StudentID) }) |
+            @Html.ActionLink("Details", "Details", new { id = item.StudentID }) |
+            @Html.ActionLink("Delete", "Delete", new { studid = Convert.ToInt32(item.StudentID) })
+        </td>
+    </tr>
+}
+
+</table>
