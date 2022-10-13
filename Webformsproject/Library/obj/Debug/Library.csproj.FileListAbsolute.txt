@@ -1,0 +1,9 @@
+D:\C#\webformsproject\Library\bin\Debug\Library.dll
+D:\C#\webformsproject\Library\bin\Debug\Library.pdb
+D:\C#\webformsproject\Library\obj\Debug\Library.csproj.AssemblyReference.cache
+D:\C#\webformsproject\Library\obj\Debug\Library.csproj.CoreCompileInputs.cache
+D:\C#\webformsproject\Library\obj\Debug\Library.dll
+D:\C#\webformsproject\Library\obj\Debug\Library.pdb
+D:\C#\webformsproject\Library\bin\Debug\BLL_library.dll
+D:\C#\webformsproject\Library\bin\Debug\BLL_library.pdb
+D:\C#\webformsproject\Library\obj\Debug\Library.csproj.CopyComplete
