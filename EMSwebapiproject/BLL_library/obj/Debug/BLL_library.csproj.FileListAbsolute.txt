@@ -1,0 +1,15 @@
+D:\C#\EMSProject\BLL_library\obj\Debug\BLL_library.csproj.AssemblyReference.cache
+D:\C#\EMSProject\BLL_library\obj\Debug\BLL_library.csproj.CoreCompileInputs.cache
+D:\C#\EMSProject\BLL_library\bin\Debug\BLL_library.dll.config
+D:\C#\EMSProject\BLL_library\bin\Debug\BLL_library.dll
+D:\C#\EMSProject\BLL_library\bin\Debug\BLL_library.pdb
+D:\C#\EMSProject\BLL_library\bin\Debug\DAL_library.dll
+D:\C#\EMSProject\BLL_library\bin\Debug\EntityFramework.dll
+D:\C#\EMSProject\BLL_library\bin\Debug\EntityFramework.SqlServer.dll
+D:\C#\EMSProject\BLL_library\bin\Debug\DAL_library.pdb
+D:\C#\EMSProject\BLL_library\bin\Debug\DAL_library.dll.config
+D:\C#\EMSProject\BLL_library\bin\Debug\EntityFramework.xml
+D:\C#\EMSProject\BLL_library\bin\Debug\EntityFramework.SqlServer.xml
+D:\C#\EMSProject\BLL_library\obj\Debug\BLL_library.csproj.CopyComplete
+D:\C#\EMSProject\BLL_library\obj\Debug\BLL_library.dll
+D:\C#\EMSProject\BLL_library\obj\Debug\BLL_library.pdb
