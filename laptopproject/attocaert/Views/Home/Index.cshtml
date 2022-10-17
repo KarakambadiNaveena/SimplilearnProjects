@@ -1,0 +1,49 @@
+﻿@model IEnumerable<attocaert.Models.tbl_product>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<div class="row">
+    <div class="col-lg-10 col-md-10 col-sm-10" >
+        @if (TempData["total"] == null)
+        {
+
+            <h3>
+                Total Bill: 0 Rs
+            </h3>
+        }
+        else
+        {
+                <h3> Total Bill: @TempData["total"] Rs</h3>
+
+                }
+
+</div>
+
+
+    <div class="col-lg-2 col-md-2 col-sm-2">
+        <h3 style="color:#808080; font-family:'Arial Rounded MT';text-align:center"> <span class="btn btn-info">@Html.ActionLink("Check Out", "checkout", "Home")</span></h3>
+    </div>
+
+
+
+
+    </div>
+
+<div class="row" style="margin-bottom:100px;">
+    @if (Model != null)
+    {
+        foreach (var item in Model)
+        {
+            <div class="col-lg-4 col-md-4" style="height:200px;margin-top:100px">
+
+                <img class="img img-responsive cimg" src="@Url.Content(item.pro_image)" style=" height:100%;width:100% ;border-radius:50px 50px 50px 50px" />
+                <h3 style="color:#808080; font-family:'Arial Rounded MT';text-align:center">@item.pro_name <small>@item.pro_price Rs</small></h3>
+                <h4 style="color:#808080; font-family:'Arial Rounded MT';text-align:center" > <span class="btn btn-danger">@Html.ActionLink("Add To Cart", "Adtocart", new { id = @item.pro_id })</span></h4>
+
+            </div>
+
+        }
+    }
+</div>

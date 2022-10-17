@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="2990c5bcbaf9400d84f6db20dd985036" Name="Diagram1">
+        <EntityTypeShape EntityType="db_ecommerceModel.tbl_invoice" Width="1.5" PointX="3" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_ecommerceModel.tbl_order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_ecommerceModel.tbl_product" Width="1.5" PointX="3" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="db_ecommerceModel.tbl_user" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="db_ecommerceModel.FK__tbl_invoi__in_fk__164452B1" ManuallyRouted="false" />
+        <AssociationConnector Association="db_ecommerceModel.FK__tbl_order__o_fk___1A14E395" ManuallyRouted="false" />
+        <AssociationConnector Association="db_ecommerceModel.FK__tbl_order__o_fk___1920BF5C" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
