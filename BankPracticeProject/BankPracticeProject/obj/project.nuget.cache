@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "1TxTImHaGecozhYAHOSw0pIpdZKveii0QVeL2cOnwJIgA/Nrl4guf7Eq2ldH3fd2UCZZllDjVP4lOMltYa6VwA==",
+  "success": true,
+  "projectFilePath": "D:\\C#\\BankPracticeProject\\BankPracticeProject\\BankPracticeProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\vaishnavi\\.nuget\\packages\\microsoft.visualstudio.azure.containers.tools.targets\\1.17.0\\microsoft.visualstudio.azure.containers.tools.targets.1.17.0.nupkg.sha512"
+  ],
+  "logs": []
+}
