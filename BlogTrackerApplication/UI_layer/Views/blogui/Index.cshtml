@@ -1,0 +1,52 @@
+﻿@model IEnumerable<UI_layer.Models.blogmodel>
+<br />
+<p>
+    @Html.ActionLink("Add New", "Create")
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfCreation)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BlogUrl)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EmpEmailId)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateOfCreation)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BlogUrl)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.EmpEmailId)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "EditBlog", new { id = item.BlogId }) |
+
+                @Html.ActionLink("Delete", "DeleteBlog", new { id = item.BlogId })
+            </td>
+        </tr>
+    }
+
+</table>

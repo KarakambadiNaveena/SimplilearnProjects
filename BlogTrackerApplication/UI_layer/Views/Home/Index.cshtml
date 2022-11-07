@@ -1,0 +1,33 @@
+﻿@model IEnumerable<UI_layer.Models.blogmodel>
+
+<center>
+    <h2><b>List Of Blogs</b></h2>
+</center>
+
+
+@foreach (var item in Model)
+{
+
+    <div class="container">
+        
+        <div class="alert alert-success" role="alert">
+            <h4>   @Html.DisplayFor(modelItem => item.Title)</h4>
+
+            <h4>@Html.DisplayFor(modelItem => item.Subject)</h4>
+
+
+
+            <h4> @Html.DisplayFor(modelItem => item.DateOfCreation)</h4>
+
+            <div class="alert alert-danger" role="alert">
+                <h4> @Html.DisplayFor(modelItem => item.BlogUrl)</h4>
+            </div>
+
+            <h4>  @Html.DisplayFor(modelItem => item.EmpEmailId)</h4>
+        </div>
+    </div>
+
+    <br />
+    <br />
+}
+

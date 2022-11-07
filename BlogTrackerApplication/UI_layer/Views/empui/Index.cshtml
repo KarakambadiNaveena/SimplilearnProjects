@@ -1,0 +1,45 @@
+﻿@model IEnumerable<UI_layer.Models.empmodel>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table table-hover">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.EmailId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfJoining)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PassCode)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.EmailId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfJoining)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PassCode)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.PassCode }) |
+         
+            @Html.ActionLink("Delete", "Delete", new { id = item.PassCode })
+        </td>
+    </tr>
+}
+
+</table>
